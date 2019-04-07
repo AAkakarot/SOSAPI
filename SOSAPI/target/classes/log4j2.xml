@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<!--<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %Logger{36} 
+				- %msg%n"/> -->
+			<PatternLayout>
+			<Pattern>%-5p %d{MM/dd/yyyy HH:mm:ss} [%t] [%c{3}] %m%n</Pattern>
+			</PatternLayout>
+		</Console>
+		<!--appenders start -->
+<!-- 		<RollingRandomAccessFile name="root-appender" -->
+<!-- 			fileName="${sys:catalina.home}/logs/soslog.log" filePattern="${sys:catalina.home}/logs/soslog.%d{yyyyMMdd}-%i.log" -->
+<!-- 			immediateFlush="false" bufferSize="10"> -->
+		<RollingRandomAccessFile name="root-appender"
+			fileName="${sys:catalina.home}/logs/soslog.log" filePattern="${sys:catalina.home}/logs/soslog.%d{yyyyMMdd}-%i.log"
+			immediateFlush="true">
+			<PatternLayout>
+				<Pattern>%-5p %d{MM/dd/yyyy HH:mm:ss} [%t] [%c{3}] %m%n</Pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1"
+					modulate="true" />
+				<SizeBasedTriggeringPolicy size="500 MB" />
+				<OnStartupTriggeringPolicy />
+			</Policies>
+		</RollingRandomAccessFile>
+<!-- 		<RollingRandomAccessFile name="cybersource-appender" -->
+<!-- 			fileName="${sys:catalina.home}/logs/cybersource.log" filePattern="${sys:catalina.home}/logs/cybersource.%d{yyyyMMdd}-%i.log" -->
+<!-- 			immediateFlush="false" bufferSize="10"> -->
+	</Appenders>
+
+	<Loggers>
+
+		<Logger name="com.zaakpay.upi" level="info" additivity="false">
+			<AppenderRef ref="UpiInfoAppender"/>
+		</Logger>
+		<Root level="DEBUG" includeLocation="true">
+			<AppenderRef ref="root-appender" />
+		</Root>
+	</Loggers>
+</Configuration>		

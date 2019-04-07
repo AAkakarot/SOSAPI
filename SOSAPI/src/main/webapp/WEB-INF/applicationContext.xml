@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:cache="http://www.springframework.org/schema/cache" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd">
+
+
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations" value="file:${catalina.home}/conf/SOSAPI/env.properties" />
+        <property name="ignoreResourceNotFound" value="true" />
+        <property name="ignoreUnresolvablePlaceholders" value="true" />
+        <property name="searchSystemEnvironment" value="true" />
+        <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
+    </bean>
+
+    <import resource="db-context.xml"/>
+
+
+    <context:annotation-config/>
+    <context:component-scan base-package="services,dao,util.general,util.network"/>
+
+    <!--
+        <cache:annotation-driven proxy-target-class="true" cache-manager="upiCache"/>
+    -->
+
+    <!--
+        <bean id="cacheManagerUPI"
+              class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean"
+              p:configLocation="classpath:ehcache.xml" p:shared="false" />
+
+        <bean id="upiCache" class="org.springframework.cache.ehcache.EhCacheCacheManager"
+              p:cacheManager-ref="cacheManagerUPI"/>
+    -->
+
+    <!--<bean id="upPgCredentialsCache" class="net.sf.ehcache.Cache"
+          factory-bean="cacheManagerUPI" factory-method="getCache">
+        <constructor-arg value="upPgCredentialsCache"></constructor-arg>
+    </bean>-->
+
+    <!--<bean id="entityManagerUpi"-->
+    <!--class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">-->
+    <!--<property name="dataSource" ref="upi-dataSource" />-->
+    <!--<property name="jpaVendorAdapter">-->
+    <!--<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">-->
+    <!--<property name="database" value="MYSQL" />-->
+    <!--<property name="showSql" value="false" />-->
+    <!--</bean>-->
+    <!--</property>-->
+    <!--</bean>-->
+
+
+</beans>

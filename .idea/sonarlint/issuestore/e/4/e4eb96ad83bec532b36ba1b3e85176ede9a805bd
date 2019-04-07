@@ -1,0 +1,22 @@
+
+9squid:S1214""Move constants to a class or enum.(òÏí÷
+rsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(àŒå¬
+wsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(·‚Ã¡ùÿÿÿÿ
+wsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¤ƒ‚ñÿÿÿÿÿ
+nsquid:S00114"QRename this interface name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Š®úâıÿÿÿÿ
+wsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¾¬Ï¼ûÿÿÿÿ
+rsquid:S00115!"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ø¤‘
+9squid:S1214""Move constants to a class or enum.(ú•Á
+nsquid:S00114"QRename this interface name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(´´˜ıÿÿÿÿ
+>squid:S1214""Move constants to a class or enum.(ÇãÑÿÿÿÿÿ
+>squid:S1214""Move constants to a class or enum.(´´˜ıÿÿÿÿ
+>squid:S1214 ""Move constants to a class or enum.(ÅûÌÎşÿÿÿÿ
+isquid:S00114$"QRename this interface name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ô‰©É
+>squid:S1214""Move constants to a class or enum.(Š®úâıÿÿÿÿ
+isquid:S00114"QRename this interface name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ú•Á
+nsquid:S00114"QRename this interface name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ÇãÑÿÿÿÿÿ
+9squid:S1214$""Move constants to a class or enum.(ô‰©É
+wsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ø­É²ûÿÿÿÿ
+rsquid:S00115%"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ğš±¯
+rsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ø¤‘
+nsquid:S00114 "QRename this interface name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ÅûÌÎşÿÿÿÿ

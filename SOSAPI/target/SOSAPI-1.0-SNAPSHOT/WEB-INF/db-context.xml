@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+
+    <bean id="sosapi-dataSource" destroy-method="close"
+          class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="${jdbc.driverClassName}"/>
+        <property name="jdbcUrl" value="${jdbc.url.sosapi}"/>
+        <property name="user" value="${jdbc.username.sosapi}"/>
+        <property name="password" value="${jdbc.password.sosapi}"/>
+        <property name="initialPoolSize" value="${jdbc.initialpoolsize:20}"/>
+        <property name="minPoolSize" value="5"/>
+        <property name="maxPoolSize" value="${jdbc.maxpoolsize}"/>
+        <property name="checkoutTimeout" value="${jdbc.connectionTimeOut}"/>
+        <property name="unreturnedConnectionTimeout"
+                  value="${jdbc.pool.unreturnedConnectionTimeout}"/>
+        <property name="maxIdleTime" value="${jdbc.pool.maxIdleTime}"/>
+        <property name="maxIdleTimeExcessConnections"
+                  value="${jdbc.pool.maxIdleTimeExcessConnections}"/>
+        <property name="acquireRetryAttempts" value="${jdbc.pool.acquireRetryAttempts}"/>
+        <property name="numHelperThreads" value="${jdbc.pool.numHelperThreads}"/>
+        <property name="debugUnreturnedConnectionStackTraces"
+                  value="${jdbc.pool.debugUnreturnedConnectionStackTraces}"/>
+    </bean>
+
+    <bean id="sosapi-dataSourceSlave" destroy-method="close"
+          class="com.mchange.v2.c3p0.ComboPooledDataSource" parent="sosapi-dataSource">
+        <property name="driverClass" value="${jdbc.driverClassName}"/>
+        <property name="jdbcUrl" value="${jdbcslave.url.sosapi}"/>
+        <property name="user" value="${jdbcslave.username.sosapi}"/>
+        <property name="password" value="${jdbcslave.password.sosapi}"/>
+    </bean>
+
+    <bean id="sosapi-sessionFactory"
+          class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+        <property name="dataSource" ref="sosapi-dataSource"/>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</prop>
+                <prop key="hibernate.cache.provider_class">net.sf.ehcache.hibernate.EhCacheProvider</prop>
+                <prop key="hibernate.cache.use_second_level_cache">false</prop>
+                <prop key="hibernate.cache.use_query_cache">false</prop>
+                <prop key="hibernate.show_sql">${hibernate.show_sql:true}</prop>
+                <prop key="hibernate.format_sql">true</prop>
+                <prop key="hibernate.transaction.factory_class">
+                    org.hibernate.transaction.JDBCTransactionFactory
+                </prop>
+                <prop key="hibernate.connection.release_mode">after_statement</prop>
+                <prop key="hibernate.connection.url">jdbc:mysql://localhost:3306/sosapi</prop>
+                <prop key="hibernate.connection.driver_class">com.mysql.jdbc.Driver</prop>
+            </props>
+        </property>
+        <property name="annotatedPackages"
+                  value="common.entity"/>
+        <property name="annotatedClasses">
+            <list>
+                <value>common.entity.UserPeronalInfo</value>
+                <value>common.entity.UserRegistraionInfo</value>
+                <value>common.entity.VehcilePhoneNumber</value>
+<!--                <value>com.zaakpay.sosapi.entity.sosapiTransaction</value>
+                <value>com.zaakpay.sosapi.entity.sosapiEnvParam</value>
+                <value>com.zaakpay.sosapi.entity.sosapiRefundDetail</value>
+                <value>com.zaakpay.sosapi.entity.sosapiPgCredentials</value>-->
+            </list>
+        </property>
+    </bean>
+
+    <bean id="sosapi-sessionFactorySlave"
+          class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+        <property name="dataSource" ref="sosapi-dataSourceSlave"/>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</prop>
+                <prop key="hibernate.current_session_context_class">thread</prop>
+                <prop key="hibernate.cache.provider_class">net.sf.ehcache.hibernate.EhCacheProvider</prop>
+                <prop key="hibernate.cache.use_second_level_cache">false</prop>
+                <prop key="hibernate.cache.use_query_cache">false</prop>
+                <prop key="hibernate.show_sql">false</prop>
+                <prop key="hibernate.format_sql">true</prop>
+                <prop key="hibernate.transaction.factory_class">
+                    org.hibernate.transaction.JDBCTransactionFactory
+                </prop>
+                <prop key="hibernate.connection.release_mode">after_statement</prop>
+            </props>
+        </property>
+        <property name="annotatedPackages"
+                  value="common.entity"/>
+    </bean>
+
+
+    <bean id="sosapi-hibernateTxManager"
+          class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sosapi-sessionFactory"/>
+        <qualifier value="sosapi-hibernateTxManager"/>
+    </bean>
+
+    <bean id="sosapi-hibernateTxManagerSlave"
+          class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sosapi-sessionFactorySlave"/>
+        <qualifier value="core-hibernateTxManagerSlave"/>
+    </bean>
+
+    <bean id="sosapi-transactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="sosapi-dataSource"></property>
+    </bean>
+
+    <bean id="sosapi-txTemplate" class="org.springframework.transaction.support.TransactionTemplate">
+        <property name="transactionManager" ref="sosapi-transactionManager"></property>
+    </bean>
+    <tx:annotation-driven transaction-manager="sosapi-hibernateTxManager"/>
+</beans>

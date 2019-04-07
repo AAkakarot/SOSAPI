@@ -1,0 +1,4 @@
+util/logger/MyLogManager.class
+dao/BaseDao.class
+util/logger/MyLogger.class
+controller/SignUpController.class

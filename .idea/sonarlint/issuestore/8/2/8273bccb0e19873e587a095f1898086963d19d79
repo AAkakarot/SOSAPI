@@ -1,0 +1,21 @@
+
+nsquid:UselessImportCheck"ERemove this unused import 'org.springframework.stereotype.Component'.(Ş÷Ñ¸ÿÿÿÿÿ
+Osquid:UselessImportCheck"+Remove this unused import 'java.util.Date'.(¸…¼ü
+^squid:S00112""FDefine and throw a dedicated exception instead of using a generic one.(ÕÏÊ
+`squid:UselessImportCheck"7Remove this unused import 'javax.jws.soap.SOAPBinding'.(î¶âÑûÿÿÿÿ
+gsquid:CommentedOutCodeLine$"<This block of commented-out lines of code should be removed.(·Ëıüÿÿÿÿ
+Isquid:S1172""2Remove this unused method parameter "phonenumber".(ÕÏÊ
+csquid:UselessImportCheck":Remove this unused import 'common.entity.UserPeronalInfo'.(ìÓê®úÿÿÿÿ
+Tsquid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ
+Vsquid:UselessImportCheck"2Remove this unused import 'common.dto.SmsRequest'.(óØåÜ
+Xsquid:UselessImportCheck"4Remove this unused import 'util.general.Stringpool'.(Ñ²à 
+Bsquid:UselessImportCheck"Remove this duplicated import.(Ñ²à 
+]squid:UselessImportCheck"4Remove this unused import 'dao.UserPersonalInfoDao'.(šĞÕŞúÿÿÿÿ
+ysquid:S1488#"bImmediately return this expression instead of assigning it to the temporary variable "jsonObject".(™Ö…œ
+%squid:RedundantThrowsDeclarationCheck""lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ÕÏÊ
+msquid:UselessImportCheck"IRemove this unused import 'com.sun.xml.internal.ws.util.CompletedFuture'.(ê£ùÊ
+Wsquid:UselessImportCheck".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ
+[squid:UselessImportCheck"2Remove this unused import 'util.network.HttpUtil'.(•é†àúÿÿÿÿ
+gsquid:UselessImportCheck"CRemove this unused import 'java.util.concurrent.CompletableFuture'.(ôŞä´
+bsquid:UselessImportCheck">Remove this unused import 'common.entity.UserRegistraionInfo'.(×˜à¨
+Lsquid:S1191"5Use classes from the Java API instead of Sun classes.(ê£ùÊ

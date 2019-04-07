@@ -1,0 +1,12 @@
+
+asquid:S4488)"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(›ú¶ò
+gsquid:CommentedOutCodeLine$"<This block of commented-out lines of code should be removed.(žôÖÍûÿÿÿÿ
+gsquid:CommentedOutCodeLine9"<This block of commented-out lines of code should be removed.(û°¾ªûÿÿÿÿ
+`squid:UselessImportCheck"<Remove this unused import 'javax.servlet.RequestDispatcher'.(Ëöò¼
+\squid:UselessImportCheck"3Remove this unused import 'services.SignUpService'.(×œ¬ûÿÿÿÿ
+Wsquid:UselessImportCheck".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ
+Zsquid:UselessImportCheck"6Remove this unused import 'services.VerifyOtpService'.(‰ô£
+Wsquid:UselessImportCheck"4Remove this unused import 'org.apache.log4j.Logger'.(ñè½
+rsquid:UselessImportCheck"IRemove this unused import 'org.springframework.web.servlet.ModelAndView'.(Ç¨ÿäûÿÿÿÿ
+bsquid:UselessImportCheck	"9Remove this unused import 'org.springframework.ui.Model'.(ê†ýÿÿÿÿ
+asquid:UselessImportCheck"8Remove this unused import 'org.apache.log4j.LogManager'.(Øê˜Ìüÿÿÿÿ

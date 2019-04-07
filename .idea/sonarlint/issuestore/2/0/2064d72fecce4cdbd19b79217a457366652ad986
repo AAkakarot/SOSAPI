@@ -1,0 +1,11 @@
+
+|squid:UselessImportCheck"SRemove this unused import 'org.springframework.beans.factory.annotation.Qualifier'.(íàÄ®ýÿÿÿÿ
+Zsquid:S1155 ">Use isEmpty() to check whether the collection is empty or not.(¨óƒ·úÿÿÿÿ
+asquid:UselessImportCheck"8Remove this unused import 'controller.SignUpController'.(±”þËþÿÿÿÿ
+bsquid:UselessImportCheck
+"9Remove this unused import 'org.hibernate.SessionFactory'.(ñ¦«¬þÿÿÿÿ
+Zsquid:S11553">Use isEmpty() to check whether the collection is empty or not.(ô¢èèûÿÿÿÿ
+~squid:UselessImportCheck"URemove this unused import 'org.springframework.transaction.annotation.Transactional'.(ðùçøùÿÿÿÿ
+gsquid:CommentedOutCodeLine@"<This block of commented-out lines of code should be removed.(Í¨½‹üÿÿÿÿ
+|squid:UselessImportCheck"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡ž¸Îùÿÿÿÿ
+]squid:S11263"AReplace this if-then-else statement by a single return statement.(ô¢èèûÿÿÿÿ

@@ -1,0 +1,12 @@
+
+Wsquid:UselessImportCheck"4Remove this unused import 'org.apache.log4j.Logger'.(ñè½
+Wsquid:UselessImportCheck".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ
+asquid:S4488*"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(‡…ÖÆ
+\squid:UselessImportCheck"3Remove this unused import 'services.SignUpService'.(×œ¬ûÿÿÿÿ
+gsquid:CommentedOutCodeLine%"<This block of commented-out lines of code should be removed.(ôÖÍûÿÿÿÿ
+bsquid:UselessImportCheck	"9Remove this unused import 'org.springframework.ui.Model'.(ê†ıÿÿÿÿ
+Zsquid:UselessImportCheck"6Remove this unused import 'services.VerifyOtpService'.(‰ô£
+asquid:UselessImportCheck"8Remove this unused import 'org.apache.log4j.LogManager'.(Øê˜Ìüÿÿÿÿ
+`squid:UselessImportCheck"<Remove this unused import 'javax.servlet.RequestDispatcher'.(Ëöò¼
+gsquid:CommentedOutCodeLine:"<This block of commented-out lines of code should be removed.(û°¾ªûÿÿÿÿ
+rsquid:UselessImportCheck"IRemove this unused import 'org.springframework.web.servlet.ModelAndView'.(Ç¨ÿäûÿÿÿÿ

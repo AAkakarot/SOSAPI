@@ -1,0 +1,18 @@
+
+Lsquid:S1191"5Use classes from the Java API instead of Sun classes.(ê£ùÊ
+gsquid:CommentedOutCodeLine$"<This block of commented-out lines of code should be removed.(·Ëýüÿÿÿÿ
+bsquid:CommentedOutCodeLine."<This block of commented-out lines of code should be removed.(þ„û
+csquid:S00112""FDefine and throw a dedicated exception instead of using a generic one.(œªéèüÿÿÿÿ
+Bsquid:UselessImportCheck"Remove this duplicated import.(Ñ²à 
+Osquid:UselessImportCheck"+Remove this unused import 'java.util.Date'.(¸…¼ü
+[squid:UselessImportCheck"2Remove this unused import 'util.network.HttpUtil'.(•é†àúÿÿÿÿ
+Wsquid:UselessImportCheck".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ
+gsquid:UselessImportCheck"CRemove this unused import 'java.util.concurrent.CompletableFuture'.(ôÞä´
+]squid:UselessImportCheck"4Remove this unused import 'dao.UserPersonalInfoDao'.(šÐÕÞúÿÿÿÿ
+bsquid:UselessImportCheck">Remove this unused import 'common.entity.UserRegistraionInfo'.(×˜à¨
+Tsquid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ
+nsquid:UselessImportCheck"ERemove this unused import 'org.springframework.stereotype.Component'.(Þ÷Ñ¸ÿÿÿÿÿ
+msquid:UselessImportCheck"IRemove this unused import 'com.sun.xml.internal.ws.util.CompletedFuture'.(ê£ùÊ
+`squid:UselessImportCheck"7Remove this unused import 'javax.jws.soap.SOAPBinding'.(î¶âÑûÿÿÿÿ
+Vsquid:UselessImportCheck"2Remove this unused import 'common.dto.SmsRequest'.(óØåÜ
+Xsquid:UselessImportCheck"4Remove this unused import 'util.general.Stringpool'.(Ñ²à 

@@ -1,0 +1,8 @@
+
+asquid:UselessImportCheck"8Remove this unused import 'controller.SignUpController'.(±”þËþÿÿÿÿ
+osquid:S1602"SRemove useless curly braces around statement and then remove useless return keyword(æ’’ãøÿÿÿÿ
+Fsquid:S001085")Either remove or fill this block of code.(ñ“Š±üÿÿÿÿ
+8squid:S16431"Use a StringBuilder instead.(Úèô°þÿÿÿÿ
+usquid:S1488&"^Immediately return this expression instead of assigning it to the temporary variable "params".(‚í´£
+8squid:S16432"Use a StringBuilder instead.(¯ÐíÇýÿÿÿÿ
+Osquid:S1197."8Move the array designator from the variable to the type.(‡ò®Ð
